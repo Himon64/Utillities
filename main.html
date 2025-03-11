@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+                        <!-- daisyUI  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-800">
+
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+
+    <header>
+        <nav class="flex justify-around items-center">
+            <img class="w-16" src="assets/Group.png" alt=" ">
+            <div>
+                <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
+                <p class="border p-1 rounded">available balance</p>
+            </div>
+            <button class="btn ">logout</button>
+        </nav>
+        <section class="mt-10">
+            <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            <div class="cards grid grid-cols-3 mt-14 gap-3 p-2">
+                <div id="add-money-box" class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/wallet1.png" alt="">
+                    <h3>Add Money</h3>
+                </div>
+                <div id="cashout-box" class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/send1.png" alt="">
+                    <h3>Cashout</h3>
+                </div>
+                <div class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/money1.png" alt="">
+                    <h3>Transfer Money</h3>
+                </div>
+                <div class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/bonus1.png" alt="">
+                    <h3>Get Bonus</h3>
+                </div>
+                <div class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/purse1.png" alt="">
+                    <h3>Pay Bill</h3>
+                </div>
+                <div id="transaction-box" class="box cursor-pointer border p-4 text-center rounded-sm">
+                    <img class="w-8 mx-auto" src="assets/transaction1.png" alt="">
+                    <h3>Transactions</h3>
+                </div>
+            </div>
+
+            <section id="addmoney">
+                <h2>Add Money</h2>
+                <!-- input table -->
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                            <legend class="fieldset-legend">Select A Bank</legend>
+                            <select id="allbank" class="select">
+                                <option disabled selected>Select bank</option>
+                                <option value="Bkash">Bkash</option>
+                                <option value="Nagad">nagad</option>
+                                <option value="dbbl">DBBL</option>
+                              </select>
+                              <fieldset class="fieldset">
+                                <label class="fieldset-label">Acount number</label>
+                                <input id="Acount-Number" value="01754971781" type="number" class="input" placeholder="type your number" required/>
+                                <label class="fieldset-label">Amount</label>
+                                <input id="amount"  type="number" class="input" placeholder="type your amount" required/>
+                                <label class="fieldset-label">PIN</label>
+                                <input id="pin-ID" value="1234" type="text" class="input" placeholder="type your PIN" required/>
+                                <div><a class="link link-hover">Forgot password?</a></div>
+                                <buttono id="add-money"  class="btn  bg-blue-600 mt-4" id="login-btn">Login</buttono>
+                              </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </section>
+            
+
+
+
+            <section id="cashout">
+                <h2>Cashout</h2>
+
+                <!-- input table -->
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse">
+                      <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                              <fieldset class="fieldset">
+                                <label class="fieldset-label">Acount number</label>
+                                <input id="Acount-Number" value="01754971781" type="number" class="input" placeholder="type your number" required/>
+                                <label class="fieldset-label">Amount</label>
+                                <input id="cash-amount"  type="number" class="input" placeholder="type your amount" required/>
+                                <label class="fieldset-label">PIN</label>
+                                <input id="cash-Pin" value="1234" type="text" class="input" placeholder="type your PIN" required/>
+                                <div><a class="link link-hover">Forgot password?</a></div>
+                                <buttono id="cashout-btn"  class="btn  bg-blue-600 mt-4" id="login-btn">Login</buttono>
+                              </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </section>
+
+
+            <section id="transaction-history">
+                <h1 class="text-3xl font-bold text-center text-blue-400 p-4">Transection History</h1>
+
+                <div id="transaction-container">
+
+                </div>
+                
+                <div id="transaction-container-cashout">
+
+                </div>
+
+            </section>
+
+        </section>
+    </header>
+     
+    </section>
+    <script src="togglle.js"></script>
+    <script src="utillites.js"></script>
+    <script src="addmoney.js"></script>
+    <script src="cashout1.js"></script>
+    <script src="transectionHistory.js"></script>
+</body>
+</html>
